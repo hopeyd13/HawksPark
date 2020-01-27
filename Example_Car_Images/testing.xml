@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>Testing faces</name>
+<comment>These are images from the PASCAL VOC 2011 dataset.</comment>
+<images>
+  <image file='Lot (1).jpg'>
+    <box top='168' left='250' width='202' height='83'/>
+	<box top='253' left='238' width='235' height='95'/>
+	<box top='340' left='226' width='271' height='122'/>
+	<box top='447' left='189' width='308' height='161'/>
+	<box top='609' left='180' width='346' height='173'/>
+  </image>
+  
+  <image file='Lot (2).jpg'>
+    <box top='434' left='404' width='165' height='55'/>
+	<box top='485' left='402' width='202' height='74'/>
+	<box top='545' left='409' width='236' height='94'/>
+	<box top='617' left='398' width='283' height='146'/>
+	<box top='759' left='411' width='310' height='155'/>
+  </image>
+  
+  
+</images>
+</dataset>
