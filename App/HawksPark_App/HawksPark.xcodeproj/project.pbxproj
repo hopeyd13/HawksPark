@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D8127C446BCD040092A08B0 /* Pods_HawksParkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B03BA5DD3AD7E94FC06EF18 /* Pods_HawksParkTests.framework */; };
+		5DC31B8B23D76E6C00F2FA46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31B8A23D76E6C00F2FA46 /* AppDelegate.swift */; };
+		5DC31B8D23D76E6C00F2FA46 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31B8C23D76E6C00F2FA46 /* LoginVC.swift */; };
+		5DC31B9023D76E6C00F2FA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC31B8E23D76E6C00F2FA46 /* Main.storyboard */; };
+		5DC31B9223D76E6D00F2FA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC31B9123D76E6D00F2FA46 /* Assets.xcassets */; };
+		5DC31B9523D76E6D00F2FA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC31B9323D76E6D00F2FA46 /* LaunchScreen.storyboard */; };
+		5DC31BA023D76E6D00F2FA46 /* HawksParkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31B9F23D76E6D00F2FA46 /* HawksParkTests.swift */; };
+		5DC31BAB23D76E6D00F2FA46 /* HawksParkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BAA23D76E6D00F2FA46 /* HawksParkUITests.swift */; };
+		5DC31BBB23DE1AF400F2FA46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DC31BBA23DE1AF400F2FA46 /* GoogleService-Info.plist */; };
+		5DC31BBD23DE1DF100F2FA46 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BBC23DE1DF100F2FA46 /* MapVC.swift */; };
+		5DC31BBF23DE337700F2FA46 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BBE23DE337700F2FA46 /* LocationSearchTable.swift */; };
+		5DC31BC723EB366F00F2FA46 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BC623EB366F00F2FA46 /* Item.swift */; };
+		5DC31BC923F0B37C00F2FA46 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BC823F0B37C00F2FA46 /* TrackViewController.swift */; };
+		5DC31BCB23F0B3A300F2FA46 /* TransmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BCA23F0B3A300F2FA46 /* TransmitViewController.swift */; };
+		5DC31BCD23F0B3D100F2FA46 /* BeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC31BCC23F0B3D100F2FA46 /* BeaconViewController.swift */; };
+		A8F3A4F994BA0421A111086D /* Pods_HawksPark_HawksParkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F351819C0E9227BE55445 /* Pods_HawksPark_HawksParkUITests.framework */; };
+		C8984D70AFEA2E590FEDF9AE /* Pods_HawksPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC782ED8FDCB4C523E1C4AEE /* Pods_HawksPark.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DC31B9C23D76E6D00F2FA46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DC31B7F23D76E6C00F2FA46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DC31B8623D76E6C00F2FA46;
+			remoteInfo = HawksPark;
+		};
+		5DC31BA723D76E6D00F2FA46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DC31B7F23D76E6C00F2FA46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DC31B8623D76E6C00F2FA46;
+			remoteInfo = HawksPark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34C8B536791371B3DCD82A35 /* Pods-HawksPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawksPark.debug.xcconfig"; path = "Target Support Files/Pods-HawksPark/Pods-HawksPark.debug.xcconfig"; sourceTree = "<group>"; };
+		418F351819C0E9227BE55445 /* Pods_HawksPark_HawksParkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HawksPark_HawksParkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC31B8723D76E6C00F2FA46 /* HawksPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HawksPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC31B8A23D76E6C00F2FA46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DC31B8C23D76E6C00F2FA46 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		5DC31B8F23D76E6C00F2FA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DC31B9123D76E6D00F2FA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DC31B9423D76E6D00F2FA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DC31B9623D76E6D00F2FA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC31B9B23D76E6D00F2FA46 /* HawksParkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HawksParkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC31B9F23D76E6D00F2FA46 /* HawksParkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawksParkTests.swift; sourceTree = "<group>"; };
+		5DC31BA123D76E6D00F2FA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC31BA623D76E6D00F2FA46 /* HawksParkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HawksParkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC31BAA23D76E6D00F2FA46 /* HawksParkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawksParkUITests.swift; sourceTree = "<group>"; };
+		5DC31BAC23D76E6D00F2FA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC31BBA23DE1AF400F2FA46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5DC31BBC23DE1DF100F2FA46 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		5DC31BBE23DE337700F2FA46 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		5DC31BC623EB366F00F2FA46 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5DC31BC823F0B37C00F2FA46 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		5DC31BCA23F0B3A300F2FA46 /* TransmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmitViewController.swift; sourceTree = "<group>"; };
+		5DC31BCC23F0B3D100F2FA46 /* BeaconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconViewController.swift; sourceTree = "<group>"; };
+		65316E2CCAD12D9257C60D10 /* Pods-HawksPark-HawksParkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawksPark-HawksParkUITests.release.xcconfig"; path = "Target Support Files/Pods-HawksPark-HawksParkUITests/Pods-HawksPark-HawksParkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86D14DDEA0C3D0D820A3E871 /* Pods-HawksPark-HawksParkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawksPark-HawksParkUITests.debug.xcconfig"; path = "Target Support Files/Pods-HawksPark-HawksParkUITests/Pods-HawksPark-HawksParkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F77BFB8E96CEE8FD55905EC /* Pods-HawksParkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawksParkTests.debug.xcconfig"; path = "Target Support Files/Pods-HawksParkTests/Pods-HawksParkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B03BA5DD3AD7E94FC06EF18 /* Pods_HawksParkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HawksParkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9AF0172D3ABE4BA54103DCE /* Pods-HawksParkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawksParkTests.release.xcconfig"; path = "Target Support Files/Pods-HawksParkTests/Pods-HawksParkTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC782ED8FDCB4C523E1C4AEE /* Pods_HawksPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HawksPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CEF1C9C51C92812AE0AB5D /* Pods-HawksPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawksPark.release.xcconfig"; path = "Target Support Files/Pods-HawksPark/Pods-HawksPark.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DC31B8423D76E6C00F2FA46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8984D70AFEA2E590FEDF9AE /* Pods_HawksPark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC31B9823D76E6D00F2FA46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8127C446BCD040092A08B0 /* Pods_HawksParkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC31BA323D76E6D00F2FA46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F3A4F994BA0421A111086D /* Pods_HawksPark_HawksParkUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43FC6497AAEC86934DF454E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC782ED8FDCB4C523E1C4AEE /* Pods_HawksPark.framework */,
+				418F351819C0E9227BE55445 /* Pods_HawksPark_HawksParkUITests.framework */,
+				9B03BA5DD3AD7E94FC06EF18 /* Pods_HawksParkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AC91A14227BA6E5EF329514 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34C8B536791371B3DCD82A35 /* Pods-HawksPark.debug.xcconfig */,
+				F0CEF1C9C51C92812AE0AB5D /* Pods-HawksPark.release.xcconfig */,
+				86D14DDEA0C3D0D820A3E871 /* Pods-HawksPark-HawksParkUITests.debug.xcconfig */,
+				65316E2CCAD12D9257C60D10 /* Pods-HawksPark-HawksParkUITests.release.xcconfig */,
+				8F77BFB8E96CEE8FD55905EC /* Pods-HawksParkTests.debug.xcconfig */,
+				B9AF0172D3ABE4BA54103DCE /* Pods-HawksParkTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5DC31B7E23D76E6C00F2FA46 = {
+			isa = PBXGroup;
+			children = (
+				5DC31B8923D76E6C00F2FA46 /* HawksPark */,
+				5DC31B9E23D76E6D00F2FA46 /* HawksParkTests */,
+				5DC31BA923D76E6D00F2FA46 /* HawksParkUITests */,
+				5DC31B8823D76E6C00F2FA46 /* Products */,
+				4AC91A14227BA6E5EF329514 /* Pods */,
+				43FC6497AAEC86934DF454E6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DC31B8823D76E6C00F2FA46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DC31B8723D76E6C00F2FA46 /* HawksPark.app */,
+				5DC31B9B23D76E6D00F2FA46 /* HawksParkTests.xctest */,
+				5DC31BA623D76E6D00F2FA46 /* HawksParkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DC31B8923D76E6C00F2FA46 /* HawksPark */ = {
+			isa = PBXGroup;
+			children = (
+				5DC31BBA23DE1AF400F2FA46 /* GoogleService-Info.plist */,
+				5DC31B8A23D76E6C00F2FA46 /* AppDelegate.swift */,
+				5DC31BC623EB366F00F2FA46 /* Item.swift */,
+				5DC31B8C23D76E6C00F2FA46 /* LoginVC.swift */,
+				5DC31BC823F0B37C00F2FA46 /* TrackViewController.swift */,
+				5DC31BCA23F0B3A300F2FA46 /* TransmitViewController.swift */,
+				5DC31BCC23F0B3D100F2FA46 /* BeaconViewController.swift */,
+				5DC31BBE23DE337700F2FA46 /* LocationSearchTable.swift */,
+				5DC31BBC23DE1DF100F2FA46 /* MapVC.swift */,
+				5DC31B8E23D76E6C00F2FA46 /* Main.storyboard */,
+				5DC31B9123D76E6D00F2FA46 /* Assets.xcassets */,
+				5DC31B9323D76E6D00F2FA46 /* LaunchScreen.storyboard */,
+				5DC31B9623D76E6D00F2FA46 /* Info.plist */,
+			);
+			path = HawksPark;
+			sourceTree = "<group>";
+		};
+		5DC31B9E23D76E6D00F2FA46 /* HawksParkTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DC31B9F23D76E6D00F2FA46 /* HawksParkTests.swift */,
+				5DC31BA123D76E6D00F2FA46 /* Info.plist */,
+			);
+			path = HawksParkTests;
+			sourceTree = "<group>";
+		};
+		5DC31BA923D76E6D00F2FA46 /* HawksParkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DC31BAA23D76E6D00F2FA46 /* HawksParkUITests.swift */,
+				5DC31BAC23D76E6D00F2FA46 /* Info.plist */,
+			);
+			path = HawksParkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DC31B8623D76E6C00F2FA46 /* HawksPark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC31BAF23D76E6D00F2FA46 /* Build configuration list for PBXNativeTarget "HawksPark" */;
+			buildPhases = (
+				2D59D256AB04DAF65904233D /* [CP] Check Pods Manifest.lock */,
+				5DC31B8323D76E6C00F2FA46 /* Sources */,
+				5DC31B8423D76E6C00F2FA46 /* Frameworks */,
+				5DC31B8523D76E6C00F2FA46 /* Resources */,
+				FD30C907E6FD6C68574AF4DC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HawksPark;
+			productName = HawksPark;
+			productReference = 5DC31B8723D76E6C00F2FA46 /* HawksPark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DC31B9A23D76E6D00F2FA46 /* HawksParkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC31BB223D76E6D00F2FA46 /* Build configuration list for PBXNativeTarget "HawksParkTests" */;
+			buildPhases = (
+				CAF9B41C0312640E9877C764 /* [CP] Check Pods Manifest.lock */,
+				5DC31B9723D76E6D00F2FA46 /* Sources */,
+				5DC31B9823D76E6D00F2FA46 /* Frameworks */,
+				5DC31B9923D76E6D00F2FA46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DC31B9D23D76E6D00F2FA46 /* PBXTargetDependency */,
+			);
+			name = HawksParkTests;
+			productName = HawksParkTests;
+			productReference = 5DC31B9B23D76E6D00F2FA46 /* HawksParkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DC31BA523D76E6D00F2FA46 /* HawksParkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC31BB523D76E6D00F2FA46 /* Build configuration list for PBXNativeTarget "HawksParkUITests" */;
+			buildPhases = (
+				A807D5A236BCEEDB699BFD4F /* [CP] Check Pods Manifest.lock */,
+				5DC31BA223D76E6D00F2FA46 /* Sources */,
+				5DC31BA323D76E6D00F2FA46 /* Frameworks */,
+				5DC31BA423D76E6D00F2FA46 /* Resources */,
+				979E7231FC415C3B29192980 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DC31BA823D76E6D00F2FA46 /* PBXTargetDependency */,
+			);
+			name = HawksParkUITests;
+			productName = HawksParkUITests;
+			productReference = 5DC31BA623D76E6D00F2FA46 /* HawksParkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DC31B7F23D76E6C00F2FA46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Monmouth University";
+				TargetAttributes = {
+					5DC31B8623D76E6C00F2FA46 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5DC31B9A23D76E6D00F2FA46 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5DC31B8623D76E6C00F2FA46;
+					};
+					5DC31BA523D76E6D00F2FA46 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5DC31B8623D76E6C00F2FA46;
+					};
+				};
+			};
+			buildConfigurationList = 5DC31B8223D76E6C00F2FA46 /* Build configuration list for PBXProject "HawksPark" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DC31B7E23D76E6C00F2FA46;
+			productRefGroup = 5DC31B8823D76E6C00F2FA46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DC31B8623D76E6C00F2FA46 /* HawksPark */,
+				5DC31B9A23D76E6D00F2FA46 /* HawksParkTests */,
+				5DC31BA523D76E6D00F2FA46 /* HawksParkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DC31B8523D76E6C00F2FA46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC31B9523D76E6D00F2FA46 /* LaunchScreen.storyboard in Resources */,
+				5DC31BBB23DE1AF400F2FA46 /* GoogleService-Info.plist in Resources */,
+				5DC31B9223D76E6D00F2FA46 /* Assets.xcassets in Resources */,
+				5DC31B9023D76E6C00F2FA46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC31B9923D76E6D00F2FA46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC31BA423D76E6D00F2FA46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D59D256AB04DAF65904233D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HawksPark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		979E7231FC415C3B29192980 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HawksPark-HawksParkUITests/Pods-HawksPark-HawksParkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HawksPark-HawksParkUITests/Pods-HawksPark-HawksParkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HawksPark-HawksParkUITests/Pods-HawksPark-HawksParkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A807D5A236BCEEDB699BFD4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HawksPark-HawksParkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAF9B41C0312640E9877C764 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HawksParkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD30C907E6FD6C68574AF4DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HawksPark/Pods-HawksPark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HawksPark/Pods-HawksPark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HawksPark/Pods-HawksPark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DC31B8323D76E6C00F2FA46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC31BC723EB366F00F2FA46 /* Item.swift in Sources */,
+				5DC31B8D23D76E6C00F2FA46 /* LoginVC.swift in Sources */,
+				5DC31BBD23DE1DF100F2FA46 /* MapVC.swift in Sources */,
+				5DC31B8B23D76E6C00F2FA46 /* AppDelegate.swift in Sources */,
+				5DC31BCD23F0B3D100F2FA46 /* BeaconViewController.swift in Sources */,
+				5DC31BC923F0B37C00F2FA46 /* TrackViewController.swift in Sources */,
+				5DC31BCB23F0B3A300F2FA46 /* TransmitViewController.swift in Sources */,
+				5DC31BBF23DE337700F2FA46 /* LocationSearchTable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC31B9723D76E6D00F2FA46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC31BA023D76E6D00F2FA46 /* HawksParkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC31BA223D76E6D00F2FA46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC31BAB23D76E6D00F2FA46 /* HawksParkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DC31B9D23D76E6D00F2FA46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DC31B8623D76E6C00F2FA46 /* HawksPark */;
+			targetProxy = 5DC31B9C23D76E6D00F2FA46 /* PBXContainerItemProxy */;
+		};
+		5DC31BA823D76E6D00F2FA46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DC31B8623D76E6C00F2FA46 /* HawksPark */;
+			targetProxy = 5DC31BA723D76E6D00F2FA46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DC31B8E23D76E6C00F2FA46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DC31B8F23D76E6C00F2FA46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DC31B9323D76E6D00F2FA46 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DC31B9423D76E6D00F2FA46 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DC31BAD23D76E6D00F2FA46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DC31BAE23D76E6D00F2FA46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DC31BB023D76E6D00F2FA46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C8B536791371B3DCD82A35 /* Pods-HawksPark.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQKHBVMY6U;
+				INFOPLIST_FILE = HawksPark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.monmouth.css337.1134010.HawksPark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DC31BB123D76E6D00F2FA46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0CEF1C9C51C92812AE0AB5D /* Pods-HawksPark.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQKHBVMY6U;
+				INFOPLIST_FILE = HawksPark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.monmouth.css337.1134010.HawksPark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5DC31BB323D76E6D00F2FA46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F77BFB8E96CEE8FD55905EC /* Pods-HawksParkTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQKHBVMY6U;
+				INFOPLIST_FILE = HawksParkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.monmouth.css337.1134010.HawksParkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HawksPark.app/HawksPark";
+			};
+			name = Debug;
+		};
+		5DC31BB423D76E6D00F2FA46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9AF0172D3ABE4BA54103DCE /* Pods-HawksParkTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQKHBVMY6U;
+				INFOPLIST_FILE = HawksParkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.monmouth.css337.1134010.HawksParkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HawksPark.app/HawksPark";
+			};
+			name = Release;
+		};
+		5DC31BB623D76E6D00F2FA46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D14DDEA0C3D0D820A3E871 /* Pods-HawksPark-HawksParkUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQKHBVMY6U;
+				INFOPLIST_FILE = HawksParkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.monmouth.css337.1134010.HawksParkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HawksPark;
+			};
+			name = Debug;
+		};
+		5DC31BB723D76E6D00F2FA46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65316E2CCAD12D9257C60D10 /* Pods-HawksPark-HawksParkUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQKHBVMY6U;
+				INFOPLIST_FILE = HawksParkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.monmouth.css337.1134010.HawksParkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HawksPark;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DC31B8223D76E6C00F2FA46 /* Build configuration list for PBXProject "HawksPark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC31BAD23D76E6D00F2FA46 /* Debug */,
+				5DC31BAE23D76E6D00F2FA46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DC31BAF23D76E6D00F2FA46 /* Build configuration list for PBXNativeTarget "HawksPark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC31BB023D76E6D00F2FA46 /* Debug */,
+				5DC31BB123D76E6D00F2FA46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DC31BB223D76E6D00F2FA46 /* Build configuration list for PBXNativeTarget "HawksParkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC31BB323D76E6D00F2FA46 /* Debug */,
+				5DC31BB423D76E6D00F2FA46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DC31BB523D76E6D00F2FA46 /* Build configuration list for PBXNativeTarget "HawksParkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC31BB623D76E6D00F2FA46 /* Debug */,
+				5DC31BB723D76E6D00F2FA46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DC31B7F23D76E6C00F2FA46 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_HawksPark_HawksParkUITests {
+  umbrella header "Pods-HawksPark-HawksParkUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
