@@ -1,3 +1,11 @@
+// exports.index = function(req, res) {
+//     res.render('space', {title: 'Parking Availability'});
+// };
+
+// exports.add_space = function(req, res){
+
+// };
+
 module.exports = app => {
     const spaces = require("../controllers/space.controller.js");
 
