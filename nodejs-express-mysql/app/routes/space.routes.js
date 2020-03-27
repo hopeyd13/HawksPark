@@ -1,11 +1,3 @@
-exports.index = function(req, res) {
-    //changed spaces to apps
-    res.render('app', {title: 'Parking Availability'});
-};
-
-exports.add_space = function(req, res){
-};
-
 module.exports = app => {
     const spaces = require("../controllers/space.controller.js");
 
