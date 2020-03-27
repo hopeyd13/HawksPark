@@ -2,19 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-//repeated at bottom app = require('./app/routes/space.routes.js');
-
-// app.get('/spaces', app.index);
-// app.post('/add_space', app.add_space);
-
-var path = require('path');
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-// app.use('/', routes);
 
 // parse requests of content-type: application/x-www-form-urlencoded
-// app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
