@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
 require("./app/routes/space.routes.js")(app);
 
 // set port, listen for requests
-app.listen(3000, () => {
-  console.log("Server is running on port 3000.");
+app.listen(22, () => {
+  console.log("Server is running on port 22.");
 });
