@@ -1,5 +1,5 @@
 module.exports = {
-    HOST: "ec2-3-89-189-148.compute-1.amazonaws.com",
+    HOST: "ec2-52-90-111-121.compute-1.amazonaws.com",
     USER: "admin",
     PASSWORD: "csseHH219!",
     DB: "hawksparkdb"
