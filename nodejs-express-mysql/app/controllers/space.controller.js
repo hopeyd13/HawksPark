@@ -351,3 +351,16 @@ exports.rowInfo = (req, res) => {
         else res.send(data);
     });
 };
+
+exports.spaceInfo = (req, res) => {
+    Space.spaceInfo(
+        req.params.spaceID,
+        (err, data) => {
+        if(err)
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving space information"
+            });
+        else res.send(data);
+    });
+};

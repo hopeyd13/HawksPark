@@ -63,4 +63,7 @@ module.exports = app => {
 
     //get information for all spaces in row
     app.get("/spaces/rowInfo/:rowID", spaces.rowInfo);
+
+    //get information for specific space
+    app.get("/spaces/spaceInfo/:spaceID", spaces.spaceInfo);
 }

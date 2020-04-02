@@ -218,7 +218,7 @@ Space.findClosedSpacesInLot = (lotID, result) => {
 };
 
 //sets a space's status to available
-Space.markSpaceAvail = (id, space, result) => {
+Space.markSpaceAvail = (id, result) => {
     sql.query(
       "UPDATE spaces SET `Status` = 1 WHERE `ID` = ?", [id],
       (err, res) => {
@@ -232,14 +232,24 @@ Space.markSpaceAvail = (id, space, result) => {
           // not found Space with the id
           result({ kind: "not_found" }, null);
           return;
-        }   
-        console.log("updated space: ", { id: id, ...space });
-        result(null, { id: id, ...space });     
-      });
+        }    
+
+        //returns changed space information
+      sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
+         (err, res) => {
+        if(err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+        console.log("Info for spaceID: " + id + ": ", res);
+        result(null, res);
+        });
+    });
   };
 
 //sets a space's status to occupied
-Space.markSpaceOcc = (id, space, result) => {
+Space.markSpaceOcc = (id, result) => {
     sql.query(
       "UPDATE spaces SET `Status` = 2 WHERE `ID` = ?", [id],
       (err, res) => {
@@ -254,13 +264,23 @@ Space.markSpaceOcc = (id, space, result) => {
           result({ kind: "not_found" }, null);
           return;
         }
-        console.log("updated space: ", { id: id, ...space });
-        result(null, { id: id, ...space });
+
+        //returns changed space information
+        sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
+        (err, res) => {
+       if(err) {
+           console.log("error: ", err);
+           result(null, err);
+           return;
+       }
+       console.log("Info for spaceID: " + id + ": ", res);
+       result(null, res);
+       });
       });
 };
 
 //sets a space's status to reserved
-Space.markSpaceReserved = (id, space, result) => {
+Space.markSpaceReserved = (id, result) => {
    sql.query(
       "UPDATE spaces SET `Status` = 3 WHERE id = ?", [id],
       (err, res) => {
@@ -275,13 +295,23 @@ Space.markSpaceReserved = (id, space, result) => {
           result({ kind: "not_found" }, null);
           return;
         }
-        console.log("updated space: ", { id: id, ...space });
-        result(null, { id: id, ...space });
+        
+        //returns changed space information
+        sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
+         (err, res) => {
+        if(err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+        console.log("Info for spaceID: " + id + ": ", res);
+        result(null, res);
+        });
       });
 };
 
 //sets a space's status to closed
-Space.markSpaceClosed = (id, space, result) => {
+Space.markSpaceClosed = (id, result) => {
     sql.query(
       "UPDATE spaces SET `Status` = 4 WHERE id = ?", [id],
       (err, res) => {
@@ -296,8 +326,18 @@ Space.markSpaceClosed = (id, space, result) => {
           result({ kind: "not_found" }, null);
           return;
         }
-        console.log("updated space: ", { id: id, ...space });
-        result(null, { id: id, ...space });
+
+        //returns changed space information
+        sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
+         (err, res) => {
+        if(err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+        console.log("Info for spaceID: " + id + ": ", res);
+        result(null, res);
+        });
       });
 };
 
@@ -325,6 +365,20 @@ Space.rowInfo = (rowID, result) => {
             return;
         }
         console.log("Information for row: " + rowID + ": ", res);
+        result(null, res);
+    });
+};
+
+//returns information for a specific space
+Space.spaceInfo = (id, result) => {
+    sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
+    (err, res) => {
+        if(err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+        console.log("Info for spaceID: " + id + ": ", res);
         result(null, res);
     });
 };
