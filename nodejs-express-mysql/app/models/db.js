@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   user: process.env.RDS_USERNAME,
   password: process.env.RDS_PASSWORD,
   port: process.env.RDS_PORT,
-  database: "aadlp21x2bofu7.ceop33i7izdx.us-east-1.rds.amazonaws.com"
+  database: "aadlp21x2bofu7"
 });
 
 // const connection = mysql.createConnection({
