@@ -13,30 +13,39 @@ const Space = function(space) {
 
 //create a new space
 Space.create = (newSpace, result) => {
-    sql.query("INSERT INTO spaces SET ?", newSpace, (err, res) => {
-        if(err){
-            console.log("error: ", err);
-            result(err, null);
-            return;
-        }
+    // sql.query("INSERT INTO spaces SET ?", newSpace, (err, res) => {
+    //     if(err){
+    //         console.log("error: ", err);
+    //         result(err, null);
+    //         return;
+    //     }
 
-        console.log("created space: ", {id: res.insertId, ...newSpace});
-        result(null, { id: res.insertId, ...newSpace});
-    });
+    //     console.log("created space: ", {id: res.insertId, ...newSpace});
+    //     result(null, { id: res.insertId, ...newSpace});
+    // });
 };
 
 //retrieve all spaces in database
 Space.getAll = result => {
-    sql.query("SELECT * FROM spaces", (err, res) => {
+    sql.query("SELECT name, database_id, create_date FROM sys.databases", (err,res) =>{
         if(err) {
-            console.log("error:", err);
-            result(null, err);
-            return;
-        }
-
-        console.log("All spaces: ", res);
+                    console.log("error:", err);
+                    result(null, err);
+                    return;
+                }
+                console.log("All spaces: ", res);
         result(null, res);
     });
+    // sql.query("SELECT * FROM spaces", (err, res) => {
+    //     if(err) {
+    //         console.log("error:", err);
+    //         result(null, err);
+    //         return;
+    //     }
+
+    //     console.log("All spaces: ", res);
+    //     result(null, res);
+    // });
 };
 
 //returns all available spaces in database
