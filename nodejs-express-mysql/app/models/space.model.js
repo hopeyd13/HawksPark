@@ -27,25 +27,16 @@ Space.create = (newSpace, result) => {
 
 //retrieve all spaces in database
 Space.getAll = result => {
-    sql.query("SELECT name, database_id, create_date FROM sys.databases", (err,res) =>{
+    sql.query("SELECT * FROM spaces", (err, res) => {
         if(err) {
-                    console.log("error:", err);
-                    result(null, err);
-                    return;
-                }
-                console.log("All spaces: ", res);
+            console.log("error:", err);
+            result(null, err);
+            return;
+        }
+
+        console.log("All spaces: ", res);
         result(null, res);
     });
-    // sql.query("SELECT * FROM spaces", (err, res) => {
-    //     if(err) {
-    //         console.log("error:", err);
-    //         result(null, err);
-    //         return;
-    //     }
-
-    //     console.log("All spaces: ", res);
-    //     result(null, res);
-    // });
 };
 
 //returns all available spaces in database
