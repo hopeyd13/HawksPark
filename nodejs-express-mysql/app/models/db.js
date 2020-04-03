@@ -1,13 +1,13 @@
 const mysql = require("mysql");
-// const dbConfig = require("../config/db.config.js");
+const dbConfig = require("../config/db.config.js");
 
 // Create a connection to the database
 const connection = mysql.createConnection({
-  host: process.env.RDS_HOSTNAME,
-  user: process.env.RDS_USERNAME,
-  password: process.env.RDS_PASSWORD,
-  port: process.env.RDS_PORT,
-  name: process.env.RDS_DB_NAME
+  host: dbConfig.HOST,
+  user: dbConfig.USER,
+  password: dbConfig.PASSWORD,
+  port: dbConfig.PORT,
+  database: dbConfig.DB
 });
 
 // open the MySQL connection
