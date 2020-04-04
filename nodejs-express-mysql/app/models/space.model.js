@@ -1,4 +1,4 @@
-const sql = require("C:/Users/hoped/Documents/Practicum/API/nodejs-express-mysql/server.js");
+const sql = require("../../server.js");
 
 //constructor
 const Space = function(space) {
@@ -13,16 +13,16 @@ const Space = function(space) {
 
 //create a new space
 Space.create = (newSpace, result) => {
-    // sql.query("INSERT INTO spaces SET ?", newSpace, (err, res) => {
-    //     if(err){
-    //         console.log("error: ", err);
-    //         result(err, null);
-    //         return;
-    //     }
+    sql.query("INSERT INTO spaces SET ?", newSpace, (err, res) => {
+        if(err){
+            console.log("error: ", err);
+            result(err, null);
+            return;
+        }
 
-    //     console.log("created space: ", {id: res.insertId, ...newSpace});
-    //     result(null, { id: res.insertId, ...newSpace});
-    // });
+        console.log("created space: ", {id: res.insertId, ...newSpace});
+        result(null, { id: res.insertId, ...newSpace});
+    });
 };
 
 //retrieve all spaces in database
