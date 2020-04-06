@@ -1,4 +1,4 @@
-const sql = require("../../server.js");
+const sql = require("./db.js");
 
 //constructor
 const Space = function(space) {

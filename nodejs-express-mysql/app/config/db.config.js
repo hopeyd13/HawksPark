@@ -1,7 +1,7 @@
 module.exports = {
-    HOST: "ec2-52-90-111-121.compute-1.amazonaws.com",
+    HOST: "hawksparkdb.ceop33i7izdx.us-east-1.rds.amazonaws.com",
     USER: "admin",
     PASSWORD: "csseHH219!",
     PORT: "3306",
-    DB: "aadlp21x2bofu7"
+    // DB: "hawksparkdb"
 };

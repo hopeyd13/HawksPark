@@ -6,23 +6,23 @@ const app = express();
 const mysql = require("mysql");
 
 // Create a connection to the database
-const connection = mysql.createConnection({
-  host: process.env.RDS_HOSTNAME,
-  user: process.env.RDS_USERNAME,
-  password: process.env.RDS_PASSWORD,
-  port: process.env.RDS_PORT
-});
+// const connection = mysql.createConnection({
+//   host: process.env.RDS_HOSTNAME,
+//   user: process.env.RDS_USERNAME,
+//   password: process.env.RDS_PASSWORD,
+//   port: process.env.RDS_PORT
+// });
 
-// open the MySQL connection
-connection.connect(error => {
-  if (error) {
-    console.error('Database connection failed: ' + error.stack);
-    return;
-  }
-  console.log('Successfully connected to the database.');
-});
+// // open the MySQL connection
+// connection.connect(error => {
+//   if (error) {
+//     console.error('Database connection failed: ' + error.stack);
+//     return;
+//   }
+//   console.log('Successfully connected to the database.');
+// });
 
-module.exports = connection;
+// module.exports = connection;
 
 
 // parse requests of content-type: application/x-www-form-urlencoded
