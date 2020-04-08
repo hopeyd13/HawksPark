@@ -27,7 +27,7 @@ Space.create = (newSpace, result) => {
 
 //retrieve all spaces in database
 Space.getAll = result => {
-    sql.query("SELECT * FROM spaces", (err, res) => {
+    sql.query("SELECT * FROM mydb.spaces", (err, res) => {
         if(err) {
             console.log("error:", err);
             result(null, err);
