@@ -17,7 +17,15 @@ app.get("/", (req, res) => {
 });
 
 app.use(function(req, res, next){
+  var allowedOrigins = ['localhost:3000','http://ec2-3-85-184-25.compute-1.amazonaws.com/'];
+  var origin = req.headers.origin;
+  if(allowedOrigins.indexOf(origin) > -1){
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', true);
+  return next();
 });
 
 require("./app/routes/space.routes.js")(app);

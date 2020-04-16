@@ -227,13 +227,12 @@ Space.markSpaceAvail = (id, result) => {
           result(null, err);
           return;
         }
-  
         if (res.affectedRows == 0) {
           // not found Space with the id
           result({ kind: "not_found" }, null);
           return;
-        }    
-
+        }
+    
         //returns changed space information
       sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
          (err, res) => {
@@ -245,6 +244,7 @@ Space.markSpaceAvail = (id, result) => {
         console.log("Info for spaceID: " + id + ": ", res);
         result(null, res);
         });
+    
     });
   };
 
@@ -276,7 +276,7 @@ Space.markSpaceOcc = (id, result) => {
        console.log("Info for spaceID: " + id + ": ", res);
        result(null, res);
        });
-      });
+    });
 };
 
 //sets a space's status to reserved
