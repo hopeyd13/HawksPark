@@ -25,7 +25,7 @@ app.post("/", (req, res) => {
 });
 
 app.use(function(req, res, next){
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST OPTIONS');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST, OPTIONS');
   return next();
 });
 
