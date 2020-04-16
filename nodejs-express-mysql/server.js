@@ -5,26 +5,6 @@ const app = express();
 
 const mysql = require("mysql");
 
-// Create a connection to the database
-// const connection = mysql.createConnection({
-//   host: process.env.RDS_HOSTNAME,
-//   user: process.env.RDS_USERNAME,
-//   password: process.env.RDS_PASSWORD,
-//   port: process.env.RDS_PORT
-// });
-
-// // open the MySQL connection
-// connection.connect(error => {
-//   if (error) {
-//     console.error('Database connection failed: ' + error.stack);
-//     return;
-//   }
-//   console.log('Successfully connected to the database.');
-// });
-
-// module.exports = connection;
-
-
 // parse requests of content-type: application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -42,10 +22,3 @@ require("./app/routes/space.routes.js")(app);
 app.listen(3000, () => {
   console.log("Server is running on port 3000.");
 });
-
-// import entire SDK
-var AWS = require('aws-sdk');
-// import AWS object without services
-var AWS = require('aws-sdk/global');
-// import individual service
-var S3 = require('aws-sdk/clients/s3');
