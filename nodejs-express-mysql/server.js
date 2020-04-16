@@ -24,6 +24,11 @@ app.post("/", (req, res) => {
   res.json({message: "HawksParkAPI server connection."})
 });
 
+app.use(function(req, res, next){
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST OPTIONS');
+  return next();
+});
+
 require("./app/routes/space.routes.js")(app);
 
 // set port, listen for requests
