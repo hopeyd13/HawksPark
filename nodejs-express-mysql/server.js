@@ -16,6 +16,14 @@ app.get("/", (req, res) => {
   res.json({ message: "HawksParkAPI server connection." });
 });
 
+app.put("/", (req, res) => {
+  res.json({message: "HawksParkAPI server connection."})
+});
+
+app.post("/", (req, res) => {
+  res.json({message: "HawksParkAPI server connection."})
+});
+
 require("./app/routes/space.routes.js")(app);
 
 // set port, listen for requests
