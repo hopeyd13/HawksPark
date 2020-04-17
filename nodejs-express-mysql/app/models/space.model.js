@@ -218,7 +218,7 @@ Space.findClosedSpacesInLot = (lotID, result) => {
 };
 
 //sets a space's status to available
-Space.markSpaceAvail = (id, result) => {
+Space.markSpaceAvail = (id, space, result) => {
     sql.query(
       "UPDATE spaces SET `Status` = 1 WHERE `ID` = ?", [id],
       (err, res) => {
@@ -231,8 +231,8 @@ Space.markSpaceAvail = (id, result) => {
           // not found Space with the id
           result({ kind: "not_found" }, null);
           return;
-        }
-    
+        } 
+
         //returns changed space information
       sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
          (err, res) => {
@@ -243,13 +243,14 @@ Space.markSpaceAvail = (id, result) => {
         }
         console.log("Info for spaceID: " + id + ": ", res);
         result(null, res);
+        //result(null, {id: id, ...space});
         });
     
     });
   };
 
 //sets a space's status to occupied
-Space.markSpaceOcc = (id, result) => {
+Space.markSpaceOcc = (id, space, result) => {
     sql.query(
       "UPDATE spaces SET `Status` = 2 WHERE `ID` = ?", [id],
       (err, res) => {
@@ -280,7 +281,7 @@ Space.markSpaceOcc = (id, result) => {
 };
 
 //sets a space's status to reserved
-Space.markSpaceReserved = (id, result) => {
+Space.markSpaceReserved = (id, space, result) => {
    sql.query(
       "UPDATE spaces SET `Status` = 3 WHERE id = ?", [id],
       (err, res) => {
@@ -311,7 +312,7 @@ Space.markSpaceReserved = (id, result) => {
 };
 
 //sets a space's status to closed
-Space.markSpaceClosed = (id, result) => {
+Space.markSpaceClosed = (id, space, result) => {
     sql.query(
       "UPDATE spaces SET `Status` = 4 WHERE id = ?", [id],
       (err, res) => {
