@@ -27,7 +27,8 @@ Space.create = (newSpace, result) => {
 
 //retrieve all spaces in database
 Space.getAll = result => {
-    sql.query("SELECT * FROM spaces", (err, res) => {
+    sql.query("select distinct spaces.*, `occupancy status`.status as status, lots.name as lot, rows.desc as row, type.type as type from spaces join `occupancy status` on spaces.status=`occupancy status`.id join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id", (err, res) => {
+        // sql.query("SELECT * FROM spaces", (err, res) => {
         if(err) {
             console.log("error:", err);
             result(null, err);
@@ -344,7 +345,7 @@ Space.markSpaceClosed = (id, space, result) => {
 
 //returns all spaces in a lot and only displays ID and status - Nick
 Space.lotInfo = (lotID, result) => {
-    sql.query("SELECT id, status, `Rows_ID` FROM spaces WHERE `Lots_ID` = ?", [lotID],
+    sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `Lots_ID` = ?", [lotID],
     (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -358,7 +359,7 @@ Space.lotInfo = (lotID, result) => {
 
 //returns row ID and status of spaces - Mo
 Space.rowInfo = (rowID, result) => {
-    sql.query("SELECT id, status, `Rows_ID` FROM spaces WHERE `Rows_ID` = ?", [rowID],
+    sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `Rows_ID` = ?", [rowID],
     (err, res) => {
         if(err) {
             console.log("error: ", err);
