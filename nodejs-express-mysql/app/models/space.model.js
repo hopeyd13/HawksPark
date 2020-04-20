@@ -27,7 +27,7 @@ Space.create = (newSpace, result) => {
 
 //retrieve all spaces in database
 Space.getAll = result => {
-    sql.query("select distinct spaces.*, `occupancy status`.status as status, lots.name as lot, rows.desc as row, type.type as type from spaces join `occupancy status` on spaces.status=`occupancy status`.id join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id", (err, res) => {
+    sql.query("select distinct spaces.*, `occupancy status`.status as status, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id ", (err, res) => {
         // sql.query("SELECT * FROM spaces", (err, res) => {
         if(err) {
             console.log("error:", err);
