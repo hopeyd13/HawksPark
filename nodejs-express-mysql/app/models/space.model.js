@@ -42,7 +42,7 @@ Space.getAll = result => {
 
 //returns all available spaces in database
 Space.findAvail = result => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 1", (err, res) => {
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.status = 1", (err, res) => {
         if(err) {
             console.log("error: ", err);
             result(null, err);
@@ -55,7 +55,7 @@ Space.findAvail = result => {
 
 //returns all available spaces in a row
 Space.findAvailSpacesInRow = (rowID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 1 and `Rows_ID` = ?", [rowID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.status = 1 and spaces.Rows_ID = ?", [rowID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -69,7 +69,7 @@ Space.findAvailSpacesInRow = (rowID, result) => {
 
 //returns all available spaces in lot
 Space.findAvailSpacesInLot = (lotID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 1 and `Lots_ID` = ?", [lotID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 1 and spaces.Lots_ID = ?", [lotID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -83,7 +83,7 @@ Space.findAvailSpacesInLot = (lotID, result) => {
 
 //returns all available handicap spaces
 Space.findAvailHandicap = result => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 1 and `Type_ID` = 5",
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 1 and spaces.Type_ID = 5",
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -97,7 +97,7 @@ Space.findAvailHandicap = result => {
 
 //returns all occupied spaces
 Space.findOccupied = result => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 2", (err, res) => {
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 2", (err, res) => {
         if(err) {
             console.log("error: ", err);
             result(null, err);
@@ -110,7 +110,7 @@ Space.findOccupied = result => {
 
 //returns all occupied spaces in a row
 Space.findOccSpacesInRow = (rowID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 2 and `Rows_ID` = ?", [rowID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 2 and spaces.Rows_ID = ?", [rowID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -124,7 +124,7 @@ Space.findOccSpacesInRow = (rowID, result) => {
 
 //returns all occupied in a lot
 Space.findOccSpacesInLot = (lotID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 2 and `Lots_ID` = ?", [lotID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 2 and spaces.Lots_ID = ?", [lotID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -138,7 +138,7 @@ Space.findOccSpacesInLot = (lotID, result) => {
 
 //returns all reserved spaces
 Space.findReservedSpaces = result => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 3", (err, res) => {
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 3", (err, res) => {
         if(err) {
             console.log("error: ", err);
             result(null, err);
@@ -151,7 +151,7 @@ Space.findReservedSpaces = result => {
 
 //returns reserved spaces in a row
 Space.findReservedSpacesInRow = (rowID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 3 and `Rows_ID` = ?", [rowID], 
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 3 and spaces.Rows_ID = ?", [rowID], 
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -165,7 +165,7 @@ Space.findReservedSpacesInRow = (rowID, result) => {
 
 //returns reserved spaces in a lot
 Space.findReservedSpacesInLot = (lotID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 3 and `Lots_ID` = ?", [lotID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 3 and spaces.Lots_ID = ?", [lotID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -179,7 +179,7 @@ Space.findReservedSpacesInLot = (lotID, result) => {
 
 //returns all closed spaces
 Space.findClosedSpaces = result => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 4", (err, res) => {
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 4", (err, res) => {
         if(err) {
             console.log("error: ", err);
             result(null, err);
@@ -192,7 +192,7 @@ Space.findClosedSpaces = result => {
 
 //returns clsoed spaces in a row
 Space.findClosedSpacesInRow = (rowID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 4 and `Rows_ID` = ?", [rowID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 4 and spaces.Rows_ID = ?", [rowID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -206,7 +206,7 @@ Space.findClosedSpacesInRow = (rowID, result) => {
 
 //returns all close spaces in a lot
 Space.findClosedSpacesInLot = (lotID, result) => {
-    sql.query("SELECT * FROM spaces WHERE `Status` = 4 and `Lots_ID` = ?", [lotID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 4 and spaces.Lots_ID = ?", [lotID],
         (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -345,7 +345,7 @@ Space.markSpaceClosed = (id, space, result) => {
 
 //returns all spaces in a lot and only displays ID and status - Nick
 Space.lotInfo = (lotID, result) => {
-    sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `Lots_ID` = ?", [lotID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Lots_ID = ?", [lotID],
     (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -359,7 +359,7 @@ Space.lotInfo = (lotID, result) => {
 
 //returns row ID and status of spaces - Mo
 Space.rowInfo = (rowID, result) => {
-    sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `Rows_ID` = ?", [rowID],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Rows_ID = ?", [rowID],
     (err, res) => {
         if(err) {
             console.log("error: ", err);
@@ -373,7 +373,7 @@ Space.rowInfo = (rowID, result) => {
 
 //returns information for a specific space
 Space.spaceInfo = (id, result) => {
-    sql.query("SELECT `ID`, `Desc`, `Status`, `Lat`, `Long`, `Rows_ID`, `Lots_ID`, `Type_ID` FROM spaces WHERE `ID` = ?", [id],
+    sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.ID = ?", [id],
     (err, res) => {
         if(err) {
             console.log("error: ", err);
