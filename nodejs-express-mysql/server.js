@@ -11,11 +11,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
 
-// simple route
+//default route
 app.get("/", (req, res) => {
   res.json({ message: "HawksParkAPI server connection." });
 });
 
+//allows GET, PUT, and POST calls
 app.use(function(req, res, next){
   var allowedOrigins = ['localhost:3000','http://ec2-3-85-184-25.compute-1.amazonaws.com/'];
   var origin = req.headers.origin;

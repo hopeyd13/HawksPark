@@ -204,7 +204,7 @@ Space.findClosedSpacesInRow = (rowID, result) => {
     });
 };
 
-//returns all close spaces in a lot
+//returns all closed spaces in a lot
 Space.findClosedSpacesInLot = (lotID, result) => {
     sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Status = 4 and spaces.Lots_ID = ?", [lotID],
         (err, res) => {
@@ -343,7 +343,7 @@ Space.markSpaceClosed = (id, space, result) => {
       });
 };
 
-//returns all spaces in a lot and only displays ID and status - Nick
+//returns all spaces in specific lot
 Space.lotInfo = (lotID, result) => {
     sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Lots_ID = ?", [lotID],
     (err, res) => {
@@ -357,7 +357,7 @@ Space.lotInfo = (lotID, result) => {
     });
 };
 
-//returns row ID and status of spaces - Mo
+//returns information for a specific row
 Space.rowInfo = (rowID, result) => {
     sql.query("select distinct spaces.*, `occupancy status`.status as status_desc, lots.name as lot, rows.desc as row, type.type as type from spaces join lots on spaces.lots_id=lots.id join rows on spaces.rows_id=rows.id join type on spaces.type_id=type.id join `occupancy status` on spaces.status=`occupancy status`.id WHERE spaces.Rows_ID = ?", [rowID],
     (err, res) => {
